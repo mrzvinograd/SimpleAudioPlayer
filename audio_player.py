@@ -69,11 +69,11 @@ class AudioPlayer:
         self.next_track_button.grid(row=0, column=3, padx=5)
 
         self.repeat_playlist_button = tk.Button(button_frame, text="🔁 Repeat Playlist", command=self.toggle_repeat_playlist,
-                                                bg="lightgrey", font=("Arial", 12))
+                                                bg="lightblue", font=("Arial", 12, "bold"))
         self.repeat_playlist_button.grid(row=0, column=4, padx=5)
 
         self.repeat_track_button = tk.Button(button_frame, text="🔂 Repeat Track", command=self.toggle_repeat_track,
-                                             bg="lightgrey", font=("Arial", 12))
+                                             bg="lightblue", font=("Arial", 12, "bold"))
         self.repeat_track_button.grid(row=0, column=5, padx=5)
 
         volume_frame = tk.LabelFrame(self.root, text="Volume", font=("Arial", 12), bg="#f0f0f0")
@@ -315,11 +315,11 @@ class AudioPlayer:
 
     def toggle_repeat_playlist(self):
         self.repeat_playlist = not self.repeat_playlist
-        self.repeat_playlist_button.config(bg="lightgreen" if self.repeat_playlist else "lightgrey")
+        self.repeat_playlist_button.config(bg="lightgreen" if self.repeat_playlist else "lightblue")
 
     def toggle_repeat_track(self):
         self.repeat_track = not self.repeat_track
-        self.repeat_track_button.config(bg="lightgreen" if self.repeat_track else "lightgrey")
+        self.repeat_track_button.config(bg="lightgreen" if self.repeat_track else "lightblue")
 
     def set_position(self, position):
         if self.current_track is not None:
